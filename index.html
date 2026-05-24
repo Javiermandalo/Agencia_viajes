@@ -1,55 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Lato:wght@400;700&display=swap');</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Lato:wght@400;700&display=swap');
+    </style>
     <link rel="stylesheet" href="css/style.css">
     <title></title>
 </head>
+
 <body>
     <header class>
-    <!-- header + nav Franklin-->
-    <div class="header__contenedor">
-        <a href="" class="header__logo">
-            <span class="header__logo-name"></span>
-        </a>
-    
-    
-    <nav class="nav">
-        <uL class="nav__list">
-            <li class="links__item"><a href="" class="links__link">Inicio</a></li>
-            <li class="links__item"><a href="" class="links__link">Productos</a></li>
-            <li class="links__item"><a href="" class="links__link">Sobre nosotros</a></li>
-            <li class="links__item"><a href="" class="links__link">Contacto</a></li>
-            <li class="links__item"><a href="" class="links__link"></a></li>
-        </uL>
-    </nav>
+        <!-- header + nav Franklin-->
+        <div class="header__contenedor">
+            <a href="" class="header__logo">
+                <span class="header__logo-name"></span>
+            </a>
 
-        <a href="" class="">Reservar vuelo</a>
-    </div>
-    <!-- header + nav Franklin Final-->
+
+            <nav class="nav">
+                <uL class="nav__list">
+                    <li class="links__item"><a href="" class="links__link">Inicio</a></li>
+                    <li class="links__item"><a href="" class="links__link">Productos</a></li>
+                    <li class="links__item"><a href="" class="links__link">Sobre nosotros</a></li>
+                    <li class="links__item"><a href="" class="links__link">Contacto</a></li>
+                    <li class="links__item"><a href="" class="links__link"></a></li>
+                </uL>
+            </nav>
+
+            <a href="" class="">Reservar vuelo</a>
+        </div>
+        <!-- header + nav Franklin Final-->
     </header>
 
     <main>
-    <!-- Creacion de Hero + grid Javier-->
-    <section class="container__hero">
-    
-    </section>
-    <section>
-        
-        <article>
-            
-        </article>
-    </section>
-    <!-- Javier Final-->
-    <!-- Formulario de Elsy-->
+        <!-- Creacion de Hero + grid Javier-->
+        <section class="hero" id="inicio">
+
+            <div class="hero__content">
+                <h1 class="hero__title" id="hero-title">Tu próximo horizonte comienza aquí.</h1>
+                <p class="hero__description">
+                    Inspirados en el deseo de volar, en Ícaro creamos la ruta perfecta hacia las
+                    vacaciones de tus sueños. Descubre paquetes exclusivos y vuela más alto.
+                </p>
+
+                <div class="hero__links">
+                    <a class="btn-travels" href="#">Mirar viajes</a>
+                </div>
+            </div>
+            <div class="hero__carousel--container">
+                <figure class="hero__imgs--carousel">
+                    <img src="playa.jpg" alt="Destino Playa Ícaro">
+                    <img src="montana.jpg" alt="Destino Montaña Ícaro">
+                    <img src="ciudad.jpg" alt="Destino Ciudad Ícaro">
+                    <img src="playa.jpg" alt="Destino Playa Ícaro">
+                </figure>
+            </div>
+        </section>
+
+        <section class="travel" id="viajes">
+            <div class="travel__container">
+
+                <header class="travel__header">
+                    <h2 class="travel__title" id="travel-title">Viajes</h2>
+                    <p class="travels__subtitle">
+                        Explore nuestra selección de destinos globales y rutas más solicitadas. Encuentre el itinerario
+                        perfecto con tarifas transparentes y adaptadas a su próximo viaje.
+                    </p>
+                </header>
+
+                <div class="travel__grid" role="list">
+
+                    <article class="travel__card">
+
+                        <div class="travel__card-img">
+                            <img class="travel__imagen" src="paris.jpg" alt="Fotografía de París, Francia">
+                            <span class="travel__span">Popular</span>
+                        </div>
+
+                        <div class="travel__card-content">
+                            <h3 class="travel__card-title">París, Francia</h3>
+                            <p class="travel__card-text">
+                                Explora la ciudad de la luz con un itinerario exclusivo de 5 días con todo incluido.
+                            </p>
+                        </div>
+
+                        <div class="travel__card-footer">
+                            <span class="travel__card-price">Desde $1,250</span>
+                            <a href="#" class="btn-card">Ver detalles</a>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Javier Final-->
+        <!-- Formulario de Elsy-->
     </main>
     <footer>
-    <!-- Formulario + footer Slsy -->
-    <!-- Elsy Final-->
+        <!-- Formulario + footer Slsy -->
+        <!-- Elsy Final-->
     </footer>
 
 
 </body>
+
 </html>
