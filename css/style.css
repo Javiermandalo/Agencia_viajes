@@ -1,8 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 :root {
     --c-primario:     #042C53; 
@@ -35,6 +30,12 @@
 
     --line-height-titulos: 1.2;
     --line-height-cuerpo:  1.7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 /*Franklin===========================================*/
