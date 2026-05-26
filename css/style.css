@@ -49,28 +49,28 @@
 
 /*Javier===========================================*/
 .hero {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
+    position: relative;  /* Define un limite dentro */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    min-height: 100vh;  /* Ocupa todo el ancho de la pantalla del usuario */
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 0 5%;
-    overflow: hidden;
+    overflow: hidden; /* Esconde las imagenes que salen de la pantalla*/
 }
 
 .hero__background-carousel {
-    position: absolute;
+    position: absolute;  
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    width: 100%;  /* Estira todo el ancho */
+    height: 100%; /* Estira todo el alto*/
+    z-index: 1;    /* Lo manda a la capa de mas abajo */
 }
 
 .hero__background-carousel::after {
-    content: '';
-    position: absolute;
+    content: '';        /* Requisitos obligatorios */
+    position: absolute; /* Lo pocisiona ensima del carrusel*/
     top: 0;
     left: 0;
     width: 100%;
@@ -82,19 +82,19 @@
 .hero__imgs--carousel {
     display: flex;
     width: calc(var(--carousel-images) * 100%);
-    height: 100%;
-    animation: cambio-imagen var(--carousel-duration) infinite ease-in-out;
+    height: 100%;   /* Mantine el alto total del contenedor */
+    animation: cambio-imagen var(--carousel-duration) infinite ease-in-out; /* Activa el movimiento automatico */
 }
 
 .hero__imgs--carousel img {
-    width: calc(100% / var(--carousel-images));
+    width: calc(100% / var(--carousel-images)); /* Divide el 400% entre 4  */
     height: 100%;
-    object-fit: cover;
-}
+    object-fit: cover;  /* Evita que las fotos se deformen */
+} 
 
 .hero__content {
-    position: relative;
-    z-index: 3;
+    position: relative; /* Permite activar el z-index en esta caja */
+    z-index: 3; /* Lo sube a la capa mas alta */
     max-width: 600px;
     color: var(--c-blanco);
 }
@@ -141,7 +141,7 @@
     transform: translateY(0);
 }
 
-@keyframes cambio-imagen {
+@keyframes cambio-imagen {  /* Hace la rotacion de iamgenes dividiendo en porcentaje cada una */
     0%, 20% { transform: translateX(0%); }
     25%, 45% { transform: translateX(-25%); }
     50%, 70% { transform: translateX(-50%); }
