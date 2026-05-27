@@ -45,6 +45,7 @@
     --space-2: 0.5rem;
     --space-3: 0.75rem;
     --space-4: 1rem;
+    --space-5: 2rem;
 
     /*Ancho maximo*/
     --container-max: 1100px;
@@ -172,6 +173,7 @@
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+    font-family: var(--font-titulos);
     transition: background-color 0.3s ease;
 }
 
@@ -180,13 +182,15 @@
     color: white;
 }
 
+/*Seccion sobre nosotros*/
+
 .about {
-    background-color: #004aad;
-    padding: 2rem 1rem;
+    background-color: var(--c-primario);
+    padding: var(--space-5) var(--space-4);
 }
 
 .about__container {
-    max-width: 1200px;
+    max-width: var(--container-max);
     margin: 0 auto;
 }
 
@@ -196,7 +200,7 @@
 }
 
 .about__title {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-cuerpo);
     font-size: 2rem;
     color: white;
     margin-bottom: 1rem;
@@ -204,7 +208,7 @@
 }
 
 .about__subtitle {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-cuerpo);
     font-size: 1rem;
     color: black;
     text-align: justify;
@@ -212,21 +216,16 @@
 }
 
 .about__text {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-cuerpo);
     font-size: 1rem;
     color: black;
+    width: 100%;
 }
 
 .about__content {
     display: flex;
-}
-
-.about__image {
-    width: 50%;
-    height: 50%;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
+    gap: 1rem;
+    align-items: center;
 }
 
 .about__caption {
@@ -234,6 +233,22 @@
     font-size: 0.875rem;
     color: black;
     margin-top: 0.5rem;
+    color: var(--c-blanco-texto);
+    opacity: 0.8;
+}
+
+.about__subtitle,
+.about__text,
+.about__caption {
+    color: var(--c-blanco-texto);
+}
+
+.about__imagen{
+    flex: 1;
+    max-width: 45%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    object-fit: cover;
 }
 
 /*Franklin Final ====================================*/
