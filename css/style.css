@@ -420,7 +420,7 @@ body {
     object-position: center;
 }
 
-/* Badge Flotante (Popular / Oferta) */
+
 .travel__span {
     position: absolute;
     top: var(--space-4);
@@ -501,30 +501,30 @@ body {
 }
 
 
-/* Popular: Usa el azul de acento para destacar */
+
 .travel__span--popular {
     background-color: var(--c-acento);
 }
 
-/* Precio Accesible: Usa el verde CTA que transmite ahorro o acción */
+
 .travel__span--accesible {
     background-color: var(--c-cta);
 }
 
-/* Precio Normal: Usa el azul grisáceo para que sea más neutro y elegante */
+
 .travel__span--normal {
     background-color: var(--c-texto-suave);
 }
 
 @media (max-width: 1024px) {
     .travel__grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+        grid-template-columns: repeat(2, 1fr); /* columnas en tablets */
     }
 }
 
 @media (max-width: 600px) {
     .travel__grid {
-        grid-template-columns: 1fr; /* 1 columna en celulares */
+        grid-template-columns: 1fr; /* columna en celulares */
     }
 }
 
