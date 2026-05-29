@@ -423,6 +423,17 @@ html {
     box-shadow: 0 12px 24px rgba(4, 44, 83, 0.12);
 }
 
+.testimony__card-img{
+    flex: 1 1 50%;
+}
+
+.testimony__image{
+    width: 50%;
+    height: 35%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 .testimony__card-title{
     font-family: var(--font-titulos);
     font-size: 1.1rem;
