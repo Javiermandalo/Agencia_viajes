@@ -66,6 +66,10 @@ body {
     overflow-x: hidden;                   /* Evita desbordamientos laterales del carrusel */
 }
 
+html {
+    scroll-behavior: smooth; /* Bajara de manera mas suave y fluida */
+}
+
 /*Franklin===========================================*/
 
 .header {
@@ -156,12 +160,13 @@ body {
     color: var(--c-fondo-suave);          /* Cambia a celeste en hover */
 }
 
+
 .links__link:hover::after {
     transform: scaleX(1);                 /* Despliega la línea por completo */
 }
 
 /* Botón Header */
-.btn {
+.btn__primary {
     background-color: var(--c-blanco);
     color: var(--c-primario);             /* Cambiado al primario para mejor contraste */
     padding: var(--space-2) var(--space-4);
@@ -172,15 +177,30 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn:hover {
+.btn__primary:hover {
     background-color: var(--c-acento);    /* Hover con color de acento de la marca */
     color: var(--c-blanco-texto);
 }
 
 /* Sección sobre nosotros */
 .about {
-    background-color: var(--c-primario);  /* Fondo corporativo */
-    padding: var(--space-5) var(--container-padding); /* Uso consistente de paddings */
+    background-color: var(--c-primario);
+    padding: var(--space-5) var(--container-padding);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoración geométrica sutil de fondo */
+.about::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(24, 95, 165, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 .about__container {
@@ -193,57 +213,169 @@ body {
     margin-bottom: var(--space-5);
 }
 
+/* Pequeña etiqueta superior decorativa */
+.about__badge {
+    display: inline-block;
+    font-family: var(--font-titulos);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--c-acento);
+    background-color: rgba(24, 95, 165, 0.15);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-bottom: var(--space-2);
+}
+
 .about__title {
-    font-family: var(--font-titulos);     /* Cambiado a Montserrat para consistencia */
-    font-size: var(--font-size-h1);       /* Usa variable de 2rem */
+    font-family: var(--font-titulos);
+    font-size: var(--font-size-h1);
     color: var(--c-blanco-texto);
     margin-bottom: var(--space-4);
-    text-align: center;                   /* Centrado estético para títulos principales */
 }
 
 .about__subtitle {
     font-family: var(--font-cuerpo);
-    font-size: var(--font-size-base1);    /* Tamaño 1.1rem */
-    text-align: center;                   /* Centrado armonioso con el título */
+    font-size: var(--font-size-base1);
+    color: var(--c-fondo-suave);
     line-height: var(--line-height-cuerpo);
-    max-width: 800px;                     /* Evita lecturas fatigosas */
-    margin: 0 auto;                       /* Centra el bloque */
+    max-width: 750px;
+    margin: 0 auto;
 }
 
+/* Distribución del contenido principal */
 .about__content {
-    display: flex;                        /* Divide en columnas */
-    flex-wrap: wrap;                      /* Permite adaptación móvil */
-    gap: var(--space-5);                  /* Separación uniforme de 2rem */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem;
     align-items: center;
     margin-top: var(--space-5);
 }
 
+/* Contenedor multimedia (Izquierda) */
+.about__media {
+    flex: 1 1 450px;
+    position: relative;
+}
+
+.about__img-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
 .about__imagen {
-    flex: 1 1 400px;                      /* Flexible con base de 400px */
-    max-width: 100%;                      /* Evita desbordes */
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 100%;
+    height: 400px;
     object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    transition: transform var(--transition-base);
+}
+
+.about__img-wrapper:hover .about__imagen {
+    transform: scale(1.02);
+}
+
+/* Tarjeta flotante con los años de experiencia */
+.about__experience-card {
+    position: absolute;
+    bottom: -20px;
+    right: -15px;
+    background-color: var(--c-cta);
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(15, 110, 86, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+}
+
+.about__exp-number {
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--c-blanco-texto);
+    line-height: 1;
+}
+
+.about__exp-text {
+    font-family: var(--font-cuerpo);
+    font-size: var(--font-size-xs);
+    color: var(--c-fondo-suave);
+    font-weight: 500;
+    margin-top: 0.2rem;
+}
+
+/* Contenedor de Información (Derecha) */
+.about__info {
+    flex: 1 1 450px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
 }
 
 .about__text {
-    flex: 1 1 400px;                      /* Balancea el espacio con la imagen */
     font-family: var(--font-cuerpo);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-base1);
+    color: rgba(255, 255, 255, 0.85);
     line-height: var(--line-height-cuerpo);
 }
 
-.about__caption {
-    font-size: var(--font-size-small);
-    margin-top: var(--space-2);
-    font-style: italic;                   /* Distinción de pie de página */
+/* Cuadrícula de estadísticas */
+.about__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
 }
 
-/* Forzar legibilidad blanca en About */
-.about__subtitle,
-.about__text,
-.about__caption {
+.about__stat-item {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: var(--space-4) var(--space-3);
+    border-radius: 12px;
+    text-align: center;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.about__stat-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+}
+
+.about__stat-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.about__stat-num {
+    font-family: var(--font-titulos);
+    font-size: var(--font-size-h2);
     color: var(--c-blanco-texto);
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+}
+
+.about__stat-desc {
+    font-family: var(--font-cuerpo);
+    font-size: var(--font-size-xs);
+    color: var(--c-texto-suave);
+    font-weight: 500;
+}
+
+/* Adaptación móvil para las estadísticas */
+@media (max-width: 480px) {
+    .about__stats {
+        grid-template-columns: 1fr;
+    }
+    .about__experience-card {
+        right: 0;
+        bottom: -10px;
+    }
 }
 
 /*Franklin Final ====================================*/
@@ -421,19 +553,6 @@ body {
 }
 
 
-.travel__span {
-    position: absolute;
-    top: var(--space-4);
-    right: var(--space-4);
-    background-color: var(--c-acento);
-    color: var(--c-blanco-texto);
-    padding: 0.3rem var(--space-3);
-    border-radius: 4px;
-    font-family: var(--font-titulos);
-    font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-bold);
-}
-
 /* Cuerpo de la Tarjeta */
 .travel__card-content {
     padding: var(--space-1);
@@ -532,4 +651,329 @@ body {
 
 /*Elsy===========================================*/
 
-/*Elsy final ====================================*/
+.contact {
+    position: relative;
+    /* Reemplaza 'img/fondo-avion.jpg' por la ruta real de tu imagen de avión */
+    background-image: linear-gradient(180deg, rgba(4, 44, 83, 0.9) 0%, rgba(4, 44, 83, 0.85) 100%), url('../img/imagen_avion_formulario.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Efecto Parallax elegante al hacer scroll */
+    padding: var(--space-5) var(--container-padding);
+    color: var(--c-blanco-texto);
+}
+
+.contact__container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Permite que en móviles se apile uno abajo del otro */
+    gap: var(--space-5);
+    align-items: center;
+}
+
+/* Columna de información de la izquierda */
+.contact__info {
+    flex: 1 1 450px;
+}
+
+/* Corregido: Ahora coincide exactamente con el class="contact__subtitle" de tu HTML */
+.contact__subtitle {
+    font-family: var(--font-titulos);
+    font-size: var(--font-size-h2); /* Lo bajé un poco de h1 a h2 para que no compita con el título principal de la página */
+    color: var(--c-blanco-texto);
+    margin-bottom: var(--space-4);
+    line-height: var(--line-height-titulos);
+}
+
+.contact__text {
+    font-family: var(--font-cuerpo);
+    font-size: var(--font-size-base1);
+    color: var(--c-fondo-suave);
+    margin-bottom: var(--space-5);
+}
+
+.contact__details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* NUEVO: Quitamos el margen por defecto para que el texto se alinee perfecto con el icono */
+.contact__detail-item p {
+    margin: 0;
+    font-family: var(--font-cuerpo);
+    font-size: var(--font-size-base);
+    color: var(--c-blanco-texto);
+}
+
+/* Corregido para sincronizar con HTML */
+.contact__detail-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+/* Corregido y centrado para iconos Font Awesome */
+.contact__detail-icon {
+    font-size: 1.2rem;
+    background-color: rgba(24, 95, 165, 0.3);
+    color: var(--c-acento);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Columna del Formulario de la derecha (Corregido a .contact__form) */
+.contact__form {
+    flex: 1 1 400px;
+    background-color: rgba(255, 255, 255, 0.08); /* Fondo ultra-sutil translúcido */
+    padding: var(--space-5);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px); /* Efecto de cristal esmerilado (Glassmorphism) */
+}
+
+.form__group {
+    margin-bottom: var(--space-4);
+}
+
+.form__label {
+    display: block;
+    font-family: var(--font-titulos);
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+    color: var(--c-blanco-texto);
+}
+
+/* Estilo para el icono decorativo al lado del texto del label */
+.form__input-icon {
+    color: var(--c-acento);
+    margin-right: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.form__input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(208, 221, 232, 0.3);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--c-negro-texto);
+    font-family: var(--font-cuerpo);
+    font-size: var(--font-size-base);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form__input:focus {
+    outline: none;
+    border-color: var(--c-acento);
+    box-shadow: 0 0 0 3px rgba(24, 95, 165, 0.25);
+}
+
+.form__textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Estilos de los Select (Opciones) */
+.form__input option {
+    color: var(--c-negro-texto);
+    background-color: var(--c-blanco);
+}
+
+/* Botón del Formulario (Sincronizado con .btn--cta) */
+.contact__form .btn--cta {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-titulos);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    color: var(--c-blanco-texto);
+    background-color: var(--c-cta);
+    padding: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color var(--transition-base), transform var(--transition-fast);
+}
+
+.contact__form .btn--cta:hover {
+    background-color: var(--c-acento);
+    transform: translateY(-1px);
+}
+
+.contact__form .btn--cta:active {
+    transform: translateY(0);
+}
+
+/* Animación de la flecha en el botón */
+.contact__form .btn--cta i {
+    margin-left: 0.5rem;
+    transition: transform var(--transition-fast);
+}
+
+.contact__form .btn--cta:hover i {
+    transform: translateX(4px);
+}
+
+/*==================================================
+  ELSY / NOEMI: FOOTER
+====================================================*/ 
+.footer {
+    background-color: #031e3a; /* Un tono sutilmente más oscuro que el primario para dar profundidad */
+    color: var(--c-blanco);
+    padding: 4rem 1.5rem 2rem 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.footer__container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+/* Ajustes del Logo del Footer para mantener consistencia */
+.footer__brand .header__logo {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-family: var(--font-titulos);
+}
+
+.footer__brand .header__logo-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--c-blanco-texto);
+    letter-spacing: -0.01em;
+}
+
+.footer__brand .header__tagline {
+    font-size: 0.85rem;
+    color: var(--c-fondo-suave);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.footer__brief {
+    color: var(--c-borde);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-cuerpo);
+    max-width: 320px;
+}
+
+/* Títulos de las Columnas */
+.footer__title {
+    font-family: var(--font-titulos);
+    font-size: var(--font-size-h3);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    color: var(--c-blanco-texto);
+}
+
+.footer__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--c-acento);
+}
+
+/* Enlaces del Footer */
+.footer__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer__links a {
+    color: var(--c-borde);
+    text-decoration: none;
+    font-family: var(--font-cuerpo);
+    font-size: var(--font-size-base);
+    transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.footer__links a:hover {
+    color: var(--c-blanco-texto);
+    padding-left: 6px; /* Desplazamiento suave */
+}
+
+/* Iconos de Redes Sociales */
+.social__icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social__icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--c-blanco-texto);
+    text-decoration: none;
+    font-size: 1.1rem; 
+    transition: background-color var(--transition-base), transform var(--transition-fast);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social__icons a:hover {
+    background-color: var(--c-acento);
+    color: var(--c-blanco-texto);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(24, 95, 165, 0.3);
+}
+
+/* Área inferior de Copyright */
+.footer__bottom {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(208, 221, 232, 0.15);
+    text-align: center;
+    font-family: var(--font-cuerpo);
+    font-size: var(--font-size-small);
+    color: var(--c-texto-suave);
+    line-height: 1.6;
+}
+
+.footer__bottom a {
+    color: var(--c-fondo-suave);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer__bottom a:hover {
+    color: var(--c-blanco-texto);
+    text-decoration: underline;
+}
+
+/* Responsive Design para pantallas medianas y grandes */
+@media (min-width: 768px) {
+    .footer__container {
+        grid-template-columns: 2fr 1fr 1fr; /* La marca toma más espacio, las otras columnas se alinean al lado */
+        gap: 1.5rem;
+    }
+}
+/*================ FINAL ================*/
