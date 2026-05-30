@@ -246,6 +246,67 @@ body {
     color: var(--c-blanco-texto);
 }
 
+/*seccion de testimonios*/
+.testimony{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimony__header{
+    margin-bottom: var(--space-5);
+    justify-content: center;
+}
+
+.testimony__title{
+    justify-content: center;
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--c-negro-texto);
+    margin-bottom: 10px;
+}
+
+.testimony__text{
+    font-family: var(--font-titulos);
+    font-size: 1rem;
+    color: var(--c-negro-texto);
+}
+
+.testimony__container{
+    display: flex;
+    gap: 24px;
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.testimony__card{
+    background-color: var(--c-blanco);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.testimony__card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(4, 44, 83, 0.12);
+}
+
+.testimony__card-title{
+    font-family: var(--font-titulos);
+    font-size: 1.1rem;
+    font-weight: 600px;
+    color: var(--c-negro-texto);
+    margin-bottom: 8px;
+}
+
+.testimony__card-text{
+    font-family: var(--font-cuerpo);
+    font-size: 0.9rem;
+    color: var(--c-negro-texto);
+    line-height: 1.5;
+    text-align: justify;
+}
+
 /*Franklin Final ====================================*/
 
 /*Javier===========================================*/
