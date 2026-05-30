@@ -7,21 +7,30 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Lato:wght@400;700&display=swap');
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/style.css">
-    <title></title>
+    <title>Ícaro - Agencia de Viajes</title>
 </head>
 
 <body>
     <header class="header">
         <!-- header + nav Franklin-->
         <div class="header__contenedor">
-            <a href="" class="header__logo">
+            <a href="#inicio" class="header__logo">
                 <span class="header__logo-name">Ícaro</span>
                 <span class="header__tagline">Abre tus alas</span>
             </a>
 
 
             <nav class="nav">
+<<<<<<< HEAD
+                <ul class="nav__list">
+                    <li class="links__item"><a href="#inicio" class="links__link">Inicio</a></li>
+                    <li class="links__item"><a href="#viajes" class="links__link">Destinos</a></li>
+                    <li class="links__item"><a href="#sobre-nosotros" class="links__link">Sobre nosotros</a></li>
+                    <li class="links__item"><a href="#contacto" class="links__link">Contacto</a></li>
+                </ul>
+=======
                 <uL class="nav__list">
                     <li class="links__item"><a href="#inicio" class="links__link">Inicio</a></li>
                     <li class="links__item"><a href="#viajes" class="links__link">Productos</a></li>
@@ -29,9 +38,10 @@
                     <li class="links__item"><a href="" class="links__link">Testimonios</a></li>
                     <li class="links__item"><a href="" class="links__link">Contacto</a></li>
                 </uL>
+>>>>>>> 0587df8c8e1da16b652f40bc4c94ddb067351424
             </nav>
 
-            <a href="" class="btn">Reservar vuelo</a>
+            <a href="#" class="btn__primary">Reservar vuelo</a>
         </div>
         <!-- header + nav Franklin Final-->
     </header>
@@ -64,190 +74,243 @@
         </section>
 
         <section class="travel" id="viajes">
-    <div class="travel__container">
+            <div class="travel__container">
 
-        <header class="travel__header">
-            <h2 class="travel__title" id="travel-title">Viajes</h2>
-            <p class="travels__subtitle">
-                Explore nuestra selección de destinos globales y rutas más solicitadas. Encuentre el itinerario
-                perfecto con tarifas transparentes y adaptadas a su próximo viaje.
-            </p>
-        </header>
+                <header class="travel__header">
+                    <h2 class="travel__title" id="travel-title">Viajes</h2>
+                    <p class="travels__subtitle">
+                        Explore nuestra selección de destinos globales y rutas más solicitadas. Encuentre el itinerario
+                        perfecto con tarifas transparentes y adaptadas a su próximo viaje.
+                    </p>
+                </header>
 
-        <div class="travel__grid" role="list">
+                <div class="travel__grid" role="list">
 
-            <article class="travel__card">
-                <figure class="travel__card-img">
-                    <img src="img/paris_edificios.jpg" alt="Vista de la Torre Eiffel en París durante el atardecer" class="travel__imagen">
-                    <span class="travel__span travel__span--popular">Popular</span>
-                </figure>
-                <div class="travel__card-content">
-                    <h3 class="travel__card-title">Europa Soñada</h3>
-                    <p class="travel__card-text">Disfruta de un recorrido inolvidable por las calles históricas de París, Madrid y Roma con guías expertos en español.</p>
+                    <article class="travel__card">
+                        <figure class="travel__card-img">
+                            <img src="img/paris_edificios.jpg"
+                                alt="Vista de la Torre Eiffel en París durante el atardecer" class="travel__imagen">
+                            <span class="travel__span travel__span--popular">Popular</span>
+                        </figure>
+                        <div class="travel__card-content">
+                            <h3 class="travel__card-title">Europa Soñada</h3>
+                            <p class="travel__card-text">Disfruta de un recorrido inolvidable por las calles históricas
+                                de París, Madrid y Roma con guías expertos en español.</p>
+                        </div>
+                        <footer class="travel__card-footer">
+                            <span class="travel__card-price">$1,499</span>
+                            <a href="#" class="btn-card">Ver detalles</a>
+                        </footer>
+                    </article>
+
+
+                    <article class="travel__card">
+                        <figure class="travel__card-img">
+                            <img src="img/destino-cancun.jpg"
+                                alt="Playa paradisíaca de aguas turquesas en Cancún México" class="travel__imagen">
+                            <span class="travel__span travel__span--accesible">Precio Accesible</span>
+                        </figure>
+                        <div class="travel__card-content">
+                            <h3 class="travel__card-title">Escape a Cancún</h3>
+                            <p class="travel__card-text">Relájate en las playas del Caribe con un paquete todo incluido
+                                en hoteles de primer nivel y tours arqueológicos.</p>
+                        </div>
+                        <footer class="travel__card-footer">
+                            <span class="travel__card-price">$699</span>
+                            <a href="#" class="btn-card">Ver detalles</a>
+                        </footer>
+                    </article>
+
+                    <article class="travel__card">
+                        <figure class="travel__card-img">
+                            <img src="img/roatan_honduras.jpg"
+                                alt="Arrecife de coral y aguas cristalinas en Roatán Honduras" class="travel__imagen">
+                            <span class="travel__span travel__span--accesible">Precio Accesible</span>
+                        </figure>
+                        <div class="travel__card-content">
+                            <h3 class="travel__card-title">Aventura en Roatán</h3>
+                            <p class="travel__card-text">Descubre uno de los arrecifes de coral más hermosos del mundo.
+                                Ideal para los amantes del buceo y el descanso.</p>
+                        </div>
+                        <footer class="travel__card-footer">
+                            <span class="travel__card-price">$450</span>
+                            <a href="#" class="btn-card">Ver detalles</a>
+                        </footer>
+                    </article>
+
+                    <article class="travel__card">
+                        <figure class="travel__card-img">
+                            <img src="img/guatemala_destino.jpg"
+                                alt="Paisaje del lago de Atitlán rodeado de volcanes en Guatemala"
+                                class="travel__imagen">
+                            <span class="travel__span travel__span--accesible">Precio Accesible</span>
+                        </figure>
+                        <div class="travel__card-content">
+                            <h3 class="travel__card-title">Cultura en Guatemala</h3>
+                            <p class="travel__card-text">Explora la magia colonial de Antigua Guatemala y navega por el
+                                impresionante lago de Atitlán en un viaje cultural único.</p>
+                        </div>
+                        <footer class="travel__card-footer">
+                            <span class="travel__card-price">$380</span>
+                            <a href="#" class="btn-card">Ver detalles</a>
+                        </footer>
+                    </article>
+
+                    <article class="travel__card">
+                        <figure class="travel__card-img">
+                            <img src="img/san_andres_destino.jpg"
+                                alt="Mar de los siete colores en la isla de San Andrés Colombia" class="travel__imagen">
+                            <span class="travel__span travel__span--accesible">Precio Accesible</span>
+                        </figure>
+                        <div class="travel__card-content">
+                            <h3 class="travel__card-title">Paraíso San Andrés</h3>
+                            <p class="travel__card-text">Disfruta del famoso mar de los siete colores en Colombia con un
+                                paquete económico diseñado para toda la familia.</p>
+                        </div>
+                        <footer class="travel__card-footer">
+                            <span class="travel__card-price">$520</span>
+                            <a href="#" class="btn-card">Ver detalles</a>
+                        </footer>
+                    </article>
+
+
+                    <article class="travel__card">
+                        <figure class="travel__card-img">
+                            <img src="img/destino_tokio.jpg"
+                                alt="Calle iluminada por luces neón en el centro de Tokio Japón" class="travel__imagen">
+                            <span class="travel__span travel__span--normal">Precio Normal</span>
+                        </figure>
+                        <div class="travel__card-content">
+                            <h3 class="travel__card-title">Magia de Japón</h3>
+                            <p class="travel__card-text">Una aventura única que combina la tecnología futurista de Tokio
+                                con los templos tradicionales y milenarios de Kioto.</p>
+                        </div>
+                        <footer class="travel__card-footer">
+                            <span class="travel__card-price">$2,100</span>
+                            <a href="#" class="btn-card">Ver detalles</a>
+                        </footer>
+                    </article>
+
+                    <article class="travel__card">
+                        <figure class="travel__card-img">
+                            <img src="img/nueva_york_destino.jpg"
+                                alt="Rascacielos de Manhattan y el puente de Brooklyn en Nueva York"
+                                class="travel__imagen">
+                            <span class="travel__span travel__span--normal">Precio Normal</span>
+                        </figure>
+                        <div class="travel__card-content">
+                            <h3 class="travel__card-title">Luces de Nueva York</h3>
+                            <p class="travel__card-text">Camina por Times Square, recorre Central Park y vive la
+                                increíble energía de la gran metrópolis estadounidense.</p>
+                        </div>
+                        <footer class="travel__card-footer">
+                            <span class="travel__card-price">$1,250</span>
+                            <a href="#" class="btn-card">Ver detalles</a>
+                        </footer>
+                    </article>
+
+                    <article class="travel__card">
+                        <figure class="travel__card-img">
+                            <img src="img/peru_destino.jpg"
+                                alt="Ruinas arqueológicas de Machu Picchu en la cima de la montaña en Perú"
+                                class="travel__imagen">
+                            <span class="travel__span travel__span--normal">Precio Normal</span>
+                        </figure>
+                        <div class="travel__card-content">
+                            <h3 class="travel__card-title">Imperio Inca Perú</h3>
+                            <p class="travel__card-text">Viaja al pasado explorando la ciudadela de Machu Picchu, el
+                                Valle Sagrado y disfruta de la gastronomía de Lima.</p>
+                        </div>
+                        <footer class="travel__card-footer">
+                            <span class="travel__card-price">$980</span>
+                            <a href="#" class="btn-card">Ver detalles</a>
+                        </footer>
+                    </article>
+
+                    <article class="travel__card">
+                        <figure class="travel__card-img">
+                            <img src="img/rio.jpg"
+                                alt="Estatua del Cristo Redentor mirando hacia la bahía de Río de Janeiro Brasil"
+                                class="travel__imagen">
+                            <span class="travel__span travel__span--normal">Precio Normal</span>
+                        </figure>
+                        <div class="travel__card-content">
+                            <h3 class="travel__card-title">Ritmo de Río</h3>
+                            <p class="travel__card-text">Descubre la alegría de Río de Janeiro visitando las icónicas
+                                playas de Copacabana, el Pan de Azúcar y el Cristo Redentor.</p>
+                        </div>
+                        <footer class="travel__card-footer">
+                            <span class="travel__card-price">$1,150</span>
+                            <a href="#" class="btn-card">Ver detalles</a>
+                        </footer>
+                    </article>
+
                 </div>
-                <footer class="travel__card-footer">
-                    <span class="travel__card-price">$1,499</span>
-                    <a href="#" class="btn-card">Ver detalles</a>
-                </footer>
-            </article>
-
-
-            <article class="travel__card">
-                <figure class="travel__card-img">
-                    <img src="img/destino-cancun.jpg" alt="Playa paradisíaca de aguas turquesas en Cancún México" class="travel__imagen">
-                    <span class="travel__span travel__span--accesible">Precio Accesible</span>
-                </figure>
-                <div class="travel__card-content">
-                    <h3 class="travel__card-title">Escape a Cancún</h3>
-                    <p class="travel__card-text">Relájate en las playas del Caribe con un paquete todo incluido en hoteles de primer nivel y tours arqueológicos.</p>
-                </div>
-                <footer class="travel__card-footer">
-                    <span class="travel__card-price">$699</span>
-                    <a href="#" class="btn-card">Ver detalles</a>
-                </footer>
-            </article>
-
-            <article class="travel__card">
-                <figure class="travel__card-img">
-                    <img src="img/roatan_honduras.jpg" alt="Arrecife de coral y aguas cristalinas en Roatán Honduras" class="travel__imagen">
-                    <span class="travel__span travel__span--accesible">Precio Accesible</span>
-                </figure>
-                <div class="travel__card-content">
-                    <h3 class="travel__card-title">Aventura en Roatán</h3>
-                    <p class="travel__card-text">Descubre uno de los arrecifes de coral más hermosos del mundo. Ideal para los amantes del buceo y el descanso.</p>
-                </div>
-                <footer class="travel__card-footer">
-                    <span class="travel__card-price">$450</span>
-                    <a href="#" class="btn-card">Ver detalles</a>
-                </footer>
-            </article>
-
-            <article class="travel__card">
-                <figure class="travel__card-img">
-                    <img src="img/guatemala_destino.jpg" alt="Paisaje del lago de Atitlán rodeado de volcanes en Guatemala" class="travel__imagen">
-                    <span class="travel__span travel__span--accesible">Precio Accesible</span>
-                </figure>
-                <div class="travel__card-content">
-                    <h3 class="travel__card-title">Cultura en Guatemala</h3>
-                    <p class="travel__card-text">Explora la magia colonial de Antigua Guatemala y navega por el impresionante lago de Atitlán en un viaje cultural único.</p>
-                </div>
-                <footer class="travel__card-footer">
-                    <span class="travel__card-price">$380</span>
-                    <a href="#" class="btn-card">Ver detalles</a>
-                </footer>
-            </article>
-
-            <article class="travel__card">
-                <figure class="travel__card-img">
-                    <img src="img/san_andres_destino.jpg" alt="Mar de los siete colores en la isla de San Andrés Colombia" class="travel__imagen">
-                    <span class="travel__span travel__span--accesible">Precio Accesible</span>
-                </figure>
-                <div class="travel__card-content">
-                    <h3 class="travel__card-title">Paraíso San Andrés</h3>
-                    <p class="travel__card-text">Disfruta del famoso mar de los siete colores en Colombia con un paquete económico diseñado para toda la familia.</p>
-                </div>
-                <footer class="travel__card-footer">
-                    <span class="travel__card-price">$520</span>
-                    <a href="#" class="btn-card">Ver detalles</a>
-                </footer>
-            </article>
-
-
-            <article class="travel__card">
-                <figure class="travel__card-img">
-                    <img src="img/destino_tokio.jpg" alt="Calle iluminada por luces neón en el centro de Tokio Japón" class="travel__imagen">
-                    <span class="travel__span travel__span--normal">Precio Normal</span>
-                </figure>
-                <div class="travel__card-content">
-                    <h3 class="travel__card-title">Magia de Japón</h3>
-                    <p class="travel__card-text">Una aventura única que combina la tecnología futurista de Tokio con los templos tradicionales y milenarios de Kioto.</p>
-                </div>
-                <footer class="travel__card-footer">
-                    <span class="travel__card-price">$2,100</span>
-                    <a href="#" class="btn-card">Ver detalles</a>
-                </footer>
-            </article>
-
-            <article class="travel__card">
-                <figure class="travel__card-img">
-                    <img src="img/nueva_york_destino.jpg" alt="Rascacielos de Manhattan y el puente de Brooklyn en Nueva York" class="travel__imagen">
-                    <span class="travel__span travel__span--normal">Precio Normal</span>
-                </figure>
-                <div class="travel__card-content">
-                    <h3 class="travel__card-title">Luces de Nueva York</h3>
-                    <p class="travel__card-text">Camina por Times Square, recorre Central Park y vive la increíble energía de la gran metrópolis estadounidense.</p>
-                </div>
-                <footer class="travel__card-footer">
-                    <span class="travel__card-price">$1,250</span>
-                    <a href="#" class="btn-card">Ver detalles</a>
-                </footer>
-            </article>
-
-            <article class="travel__card">
-                <figure class="travel__card-img">
-                    <img src="img/peru_destino.jpg" alt="Ruinas arqueológicas de Machu Picchu en la cima de la montaña en Perú" class="travel__imagen">
-                    <span class="travel__span travel__span--normal">Precio Normal</span>
-                </figure>
-                <div class="travel__card-content">
-                    <h3 class="travel__card-title">Imperio Inca Perú</h3>
-                    <p class="travel__card-text">Viaja al pasado explorando la ciudadela de Machu Picchu, el Valle Sagrado y disfruta de la gastronomía de Lima.</p>
-                </div>
-                <footer class="travel__card-footer">
-                    <span class="travel__card-price">$980</span>
-                    <a href="#" class="btn-card">Ver detalles</a>
-                </footer>
-            </article>
-
-            <article class="travel__card">
-                <figure class="travel__card-img">
-                    <img src="img/rio.jpg" alt="Estatua del Cristo Redentor mirando hacia la bahía de Río de Janeiro Brasil" class="travel__imagen">
-                    <span class="travel__span travel__span--normal">Precio Normal</span>
-                </figure>
-                <div class="travel__card-content">
-                    <h3 class="travel__card-title">Ritmo de Río</h3>
-                    <p class="travel__card-text">Descubre la alegría de Río de Janeiro visitando las icónicas playas de Copacabana, el Pan de Azúcar y el Cristo Redentor.</p>
-                </div>
-                <footer class="travel__card-footer">
-                    <span class="travel__card-price">$1,150</span>
-                    <a href="#" class="btn-card">Ver detalles</a>
-                </footer>
-            </article>
-
-        </div> </div> </section>
+            </div>
+        </section>
         <!-- Javier Final-->
 
         <!--Franklin Sobre nosotros-->
+<<<<<<< HEAD
+        <section class="about" id="sobre-nosotros">
+=======
         <section class="about" id="nosotros">
+>>>>>>> 0587df8c8e1da16b652f40bc4c94ddb067351424
             <div class="about__container">
+
                 <header class="about__header">
-                    <h2 class="about__title">Sobre nosotros</h2>
+                    <span class="about__badge">Nuestra Historia</span>
+                    <h2 class="about__title">Alas para tus grandes historias</h2>
                     <p class="about__subtitle">
-                        En Íraco, surgió de la idea de poder darle alas a nuestros clientes, en consultoría de viajes y
-                        la gestión de itinerarios internacionales de alta calidad. Inspirados en nuestro nombre que en
-                        la antigua Grecia evocaba la audacia de alcanzar destinos lejanos mediante el vuelo.
-                        En Íraco, surgió de la idea de poder darle alas a nuestros clientes, en consultoría de viajes y
-                        la gestión de itinerarios internacionales de alta calidad. Inspirados en nuestro nombre que en
-                        la antigua Grecia evocaba la audacia de alcanzar destinos lejanos mediante el vuelo.
+                        Ícaro nació con el propósito de desafiar las fronteras tradicionales y ofrecer consultoría de
+                        viajes premium junto a la gestión de itinerarios internacionales de la más alta calidad.
+                    </p>
                 </header>
 
                 <div class="about__content">
-                    <figure class="about__img">
-                        <img src="img/equipo.jpg" alt="Fotografía de nuestro equipo de expertos en viajes"
-                            class="about__imagen">
+                    <div class="about__media">
+                        <figure class="about__img-wrapper">
+                            <img src="img/equipo.jpg" alt="Nuestro equipo de expertos en diseño de viajes"
+                                class="about__imagen">
+                            <div class="about__experience-card">
+                                <span class="about__exp-number">+10</span>
+                                <span class="about__exp-text">Años de Audacia</span>
+                            </div>
+                        </figure>
+                    </div>
 
-                        <figcaption class="about__caption">
-                            Nuestro equipo de expertos en viajes
-                        </figcaption>
-                    </figure>
-                    <p class="about__text">
-                        Nuestro equipo de expertos en viajes trabaja incansablemente para diseñar itinerarios únicos que
-                        se adapten a tus intereses y presupuesto. Desde escapadas románticas hasta aventuras familiares,
-                        tenemos el paquete perfecto para ti.
-                    </p>
+                    <div class="about__info">
+                        <p class="about__text">
+                            Inspirados en la mitología clásica, evocamos la audacia de alcanzar horizontes lejanos
+                            mediante el vuelo. No planeamos simples vacaciones; diseñamos experiencias a medida que
+                            transforman vidas, adaptadas minuciosamente a tus intereses, ritmo y presupuesto.
+                        </p>
+
+                        <div class="about__stats">
+                            <div class="about__stat-item">
+                                <span class="about__stat-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                                <h4 class="about__stat-num">+50</h4>
+                                <p class="about__stat-desc">Destinos Globales</p>
+                            </div>
+
+                            <div class="about__stat-item">
+                                <span class="about__stat-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                                <h4 class="about__stat-num">100%</h4>
+                                <p class="about__stat-desc">Rutas Seguras</p>
+                            </div>
+
+                            <div class="about__stat-item">
+                                <span class="about__stat-icon"><i class="fa-solid fa-user-astronaut"></i></span>
+                                <h4 class="about__stat-num">+5k</h4>
+                                <p class="about__stat-desc">Viajeros Felices</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </section>
+
         <!--Franklin Final-->
 
         <!--Franklin testimonios-->
@@ -290,11 +353,106 @@
         <!--Franklin Final-->
 
         <!--Formulario  de Elsy-->
+        <section class="contact" id="contacto">
+            <div class="contact__container">
+
+                <div class="contact__info">
+                    <h3 class="contact__subtitle">¿Listo para despegar?</h3>
+                    <p class="contact__text">Ponte en contacto con nuestros asesores premium y diseña tu próximo
+                        itinerario a medida.</p>
+
+                    <div class="contact__details">
+                        <div class="contact__detail-item">
+                            <span class="contact__detail-icon"><i class="fa-solid fa-phone-volume"></i></span>
+                            <p>+503 2600-0000</p>
+                        </div>
+
+                        <div class="contact__detail-item">
+                            <span class="contact__detail-icon"><i class="fa-solid fa-envelope-open-text"></i></span>
+                            <p>info@icaroagencia.com</p>
+                        </div>
+
+                        <div class="contact__detail-item">
+                            <span class="contact__detail-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <p>San Miguel, El Salvador</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact__form">
+                    <div class="form__group">
+                        <label for="name" class="form__label">
+                            <i class="fa-solid fa-user form__input-icon"></i> Nombre Completo
+                        </label>
+                        <input type="text" id="name" class="form__input" placeholder="Tu nombre y apellido">
+                    </div>
+
+                    <div class="form__group">
+                        <label for="email" class="form__label">
+                            <i class="fa-solid fa-paper-plane form__input-icon"></i> Correo Electrónico
+                        </label>
+                        <input type="email" id="email" class="form__input" placeholder="correo@ejemplo.com">
+                    </div>
+
+                    <div class="form__group">
+                        <label for="message" class="form__label">
+                            <i class="fa-solid fa-pen-fancy form__input-icon"></i> Tu Mensaje
+                        </label>
+                        <textarea id="message" class="form__input form__textarea"
+                            placeholder="¿A qué destino te gustaría viajar?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--cta">
+                        Enviar Mensaje <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </form>
+
+            </div>
+        </section>
     </main>
-    <footer>
-        <!-- Formulario + footer Slsy -->
-        <!-- Elsyyyyyyyyyyyyyyyyyyyyyyyyyyy -->
-        <!-- Elsy Final-->
+
+    <footer class="footer">
+        <div class="footer__container">
+
+            <div class="footer__brand">
+                <a href="#" class="header__logo">
+                    <span class="header__logo-name">Ícaro</span>
+                    <span class="header__tagline">Abre tus alas</span>
+                </a>
+                <p class="footer__brief">
+                    Estamos a tu disposición para hacer realidad tus sueños de viaje con comodidad, seguridad y
+                    elegancia al lado de nuestro mejor equipo.
+                </p>
+            </div>
+
+            <div class="footer__nav">
+                <h4 class="footer__title">Explorar</h4>
+                <ul class="footer__links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#viajes">Destinos Populares</a></li>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#contacto">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__social">
+                <h4 class="footer__title">Síguenos</h4>
+                <div class="social__icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+            <p>
+                &copy; 2026 Ícaro Agencia de Viajes. Todos los derechos reservados.
+                <br>Desarrollado por: Noemí, Javier & Franklin | <a href="#">Política de Privacidad</a>
+            </p>
+        </div>
     </footer>
 
 
