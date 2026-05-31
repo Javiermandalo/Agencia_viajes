@@ -8,7 +8,7 @@
     --c-blanco: #FFFFFF;
     --c-fondo-suave: #E6F1FB;
     --c-borde: #D0DDE8;
-    
+
     /* Color texto principal */
     --c-blanco-texto: #ffffff;
     --c-negro-texto: #000000;
@@ -17,14 +17,22 @@
     --font-titulos: 'Montserrat', sans-serif;
     --font-cuerpo: 'Lato', sans-serif;
 
-    --font-size-hero: 2.5rem;   /* Título del hero */
-    --font-size-h1: 2rem;       /* Títulos de sección */
-    --font-size-h2: 1.5rem;     /* Subtítulos */
-    --font-size-h3: 1.125rem;   /* Títulos de cards */
-    --font-size-base1: 1.1rem;  /* Descripcion pagina */
-    --font-size-base: 1rem;     /* Cuerpo */
-    --font-size-small: 0.875rem;/* Descripciones, muted */
-    --font-size-xs: 0.75rem;    /* Badges, labels */
+    --font-size-hero: 2.5rem;
+    /* Título del hero */
+    --font-size-h1: 2rem;
+    /* Títulos de sección */
+    --font-size-h2: 1.5rem;
+    /* Subtítulos */
+    --font-size-h3: 1.125rem;
+    /* Títulos de cards */
+    --font-size-base1: 1.1rem;
+    /* Descripcion pagina */
+    --font-size-base: 1rem;
+    /* Cuerpo */
+    --font-size-small: 0.875rem;
+    /* Descripciones, muted */
+    --font-size-xs: 0.75rem;
+    /* Badges, labels */
 
     --font-weight-normal: 400;
     --font-weight-medium: 500;
@@ -43,7 +51,7 @@
     /* Ancho maximo */
     --container-max: 1100px;
     --container-padding: 1.5rem;
-    
+
     /* Variables carrusel */
     --carousel-images: 4;
     --carousel-duration: 16s;
@@ -63,59 +71,87 @@ body {
     background-color: var(--c-fondo);
     font-family: var(--font-cuerpo);
     color: var(--c-negro-texto);
-    overflow-x: hidden;                   /* Evita desbordamientos laterales del carrusel */
+    overflow-x: hidden;
+    /* Evita desbordamientos laterales del carrusel */
 }
 
 html {
-    scroll-behavior: smooth; /* Bajara de manera mas suave y fluida */
+    scroll-behavior: smooth;
+    /* Bajara de manera mas suave y fluida */
 }
 
 /*Franklin===========================================*/
 
 .header {
-    position: fixed;                      /* Cambiado a fixed para flotar sobre el hero real */
-    top: 0; left: 0;                      /* Lo ancla al inicio superior de la pantalla */
-    width: 100%;                          /* Ocupa todo el ancho horizontal */
-    z-index: 100;                         /* Corregido: sin 'px' para que funcione el orden */
-    border-bottom: 1px solid rgba(208, 221, 232, 0.15); /* Borde sutil transparente */
-    background-color: rgba(4, 44, 83, 0.9); /* Azul marino con ligera opacidad */
-    backdrop-filter: blur(12px);          /* Efecto esmerilado premium */
+    position: fixed;
+    /* Cambiado a fixed para flotar sobre el hero real */
+    top: 0;
+    left: 0;
+    /* Lo ancla al inicio superior de la pantalla */
+    width: 100%;
+    /* Ocupa todo el ancho horizontal */
+    z-index: 100;
+    /* Corregido: sin 'px' para que funcione el orden */
+    border-bottom: 1px solid rgba(208, 221, 232, 0.15);
+    /* Borde sutil transparente */
+    background-color: rgba(4, 44, 83, 0.9);
+    /* Azul marino con ligera opacidad */
+    backdrop-filter: blur(12px);
+    /* Efecto esmerilado premium */
 }
 
 .header__contenedor {
-    max-width: var(--container-max);      /* Limita el ancho a 1100px */
-    padding-inline: var(--container-padding); /* Padding dinámico a los lados */
-    margin-inline: auto;                  /* Centra la barra de navegación */
-    display: flex;                        /* Distribución horizontal */
-    align-items: center;                  /* Centra verticalmente */
-    justify-content: space-between;       /* Separa logo, links y botón */
-    height: 80px;                         /* Altura fija del header */
+    max-width: var(--container-max);
+    /* Limita el ancho a 1100px */
+    padding-inline: var(--container-padding);
+    /* Padding dinámico a los lados */
+    margin-inline: auto;
+    /* Centra la barra de navegación */
+    display: flex;
+    /* Distribución horizontal */
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: space-between;
+    /* Separa logo, links y botón */
+    height: 80px;
+    /* Altura fija del header */
 }
 
 .header__logo {
-    display: flex;                        /* Caja para nombre y tagline */
-    flex-direction: column;               /* Apilado vertical */
-    text-decoration: none;                /* Quita subrayados */
+    display: flex;
+    /* Caja para nombre y tagline */
+    flex-direction: column;
+    /* Apilado vertical */
+    text-decoration: none;
+    /* Quita subrayados */
     color: var(--c-blanco-texto);
     font-family: var(--font-titulos);
     transition: opacity var(--transition-fast);
 }
 
 .header__logo:hover {
-    opacity: 0.8;                         /* Atenúa suavemente en hover */
+    opacity: 0.8;
+    /* Atenúa suavemente en hover */
 }
 
 .header__logo-name {
-    letter-spacing: -0.01em;              /* Ajuste fino de letras */
-    font-size: var(--font-size-h3);       /* Medida de 1.125rem */
-    font-weight: 700;                     /* Estilo destacado */
+    letter-spacing: -0.01em;
+    /* Ajuste fino de letras */
+    font-size: var(--font-size-h3);
+    /* Medida de 1.125rem */
+    font-weight: 700;
+    /* Estilo destacado */
 }
 
 .header__tagline {
-    letter-spacing: 0.1em;                /* Letras más separadas y estéticas */
-    font-size: var(--font-size-xs);       /* Tamaño micro de 0.75rem */
-    display: block;                       /* Se comporta como bloque propio */
-    color: var(--c-fondo-suave);          /* Color celeste claro de marca */
+    letter-spacing: 0.1em;
+    /* Letras más separadas y estéticas */
+    font-size: var(--font-size-xs);
+    /* Tamaño micro de 0.75rem */
+    display: block;
+    /* Se comporta como bloque propio */
+    color: var(--c-fondo-suave);
+    /* Color celeste claro de marca */
 }
 
 /* Navegación */
@@ -128,19 +164,23 @@ html {
 .nav__list {
     display: flex;
     align-items: center;
-    gap: var(--space-1);                  /* Separación de 1.5rem */
-    list-style: none;                     /* Elimina viñetas */
+    gap: var(--space-1);
+    /* Separación de 1.5rem */
+    list-style: none;
+    /* Elimina viñetas */
 }
 
 .links__link {
     text-decoration: none;
     color: var(--c-blanco-texto);
     font-family: var(--font-titulos);
-    font-size: var(--font-size-small);    /* Hereda consistencia tipográfica */
+    font-size: var(--font-size-small);
+    /* Hereda consistencia tipográfica */
     font-weight: 500;
     transition: color var(--transition-fast);
     position: relative;
-    padding-block: var(--space-2);        /* Zona de interacción más cómoda */
+    padding-block: var(--space-2);
+    /* Zona de interacción más cómoda */
 }
 
 /* Línea animada inferior en Hover */
@@ -148,27 +188,34 @@ html {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;                            /* Ajustado al ras del texto */
+    bottom: 0;
+    /* Ajustado al ras del texto */
     width: 100%;
     height: 2px;
-    background: var(--c-acento);          /* Color azul de acento */
-    transform: scaleX(0);                 /* Oculto por defecto */
-    transition: transform var(--transition-base); /* Transición fluida */
+    background: var(--c-acento);
+    /* Color azul de acento */
+    transform: scaleX(0);
+    /* Oculto por defecto */
+    transition: transform var(--transition-base);
+    /* Transición fluida */
 }
 
 .links__link:hover {
-    color: var(--c-fondo-suave);          /* Cambia a celeste en hover */
+    color: var(--c-fondo-suave);
+    /* Cambia a celeste en hover */
 }
 
 
 .links__link:hover::after {
-    transform: scaleX(1);                 /* Despliega la línea por completo */
+    transform: scaleX(1);
+    /* Despliega la línea por completo */
 }
 
 /* Botón Header */
 .btn__primary {
     background-color: var(--c-blanco);
-    color: var(--c-primario);             /* Cambiado al primario para mejor contraste */
+    color: var(--c-primario);
+    /* Cambiado al primario para mejor contraste */
     padding: var(--space-2) var(--space-4);
     border-radius: 8px;
     text-decoration: none;
@@ -178,7 +225,8 @@ html {
 }
 
 .btn__primary:hover {
-    background-color: var(--c-acento);    /* Hover con color de acento de la marca */
+    background-color: var(--c-acento);
+    /* Hover con color de acento de la marca */
     color: var(--c-blanco-texto);
 }
 
@@ -372,6 +420,7 @@ html {
     .about__stats {
         grid-template-columns: 1fr;
     }
+
     .about__experience-card {
         right: 0;
         bottom: -10px;
@@ -379,17 +428,17 @@ html {
 }
 
 /*seccion de testimonios*/
-.testimony{
+.testimony {
     padding: 60px 20px;
     text-align: center;
 }
 
-.testimony__header{
+.testimony__header {
     margin-bottom: var(--space-5);
     justify-content: center;
 }
 
-.testimony__title{
+.testimony__title {
     justify-content: center;
     font-family: var(--font-titulos);
     font-size: 2rem;
@@ -398,13 +447,13 @@ html {
     margin-bottom: 10px;
 }
 
-.testimony__text{
+.testimony__text {
     font-family: var(--font-titulos);
     font-size: 1rem;
     color: var(--c-negro-texto);
 }
 
-.testimony__container{
+.testimony__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -422,12 +471,21 @@ html {
     transition: transform 0.3s ease ;
 }
 
-.testimony__card:hover{
+.testimony__card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgba(4, 44, 83, 0.12);
 }
 
-.testimony__card-img{
+.testimony__card-img {
+    flex: 1 1 50%;
+}
+
+.testimony__image {
+    width: 50%;
+    height: 35%;
+}
+
+.testimony__card-img {
     flex: 1 1 25%;
 }
 
@@ -445,7 +503,7 @@ html {
     border-color: var(--c-acento);
 }
 
-.testimony__card-title{
+.testimony__card-title {
     font-family: var(--font-titulos);
     font-size: 1.1rem;
     font-weight: 600px;
@@ -453,7 +511,7 @@ html {
     margin-bottom: 8px;
 }
 
-.testimony__card-text{
+.testimony__card-text {
     font-family: var(--font-cuerpo);
     font-size: 0.9rem;
     color: var(--c-negro-texto);
@@ -463,12 +521,23 @@ html {
 
 /*Franklin Final ====================================*/
 
+
+
+
+
+
+
+
+
+
+
 /*Javier===========================================*/
 
 .hero {
     position: relative;
     width: 100%;
-    min-height: 100vh;                    /* Ocupa toda la altura de pantalla */
+    min-height: 100vh;
+    /* Ocupa toda la altura de pantalla */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -478,30 +547,38 @@ html {
 
 .hero__background-carousel {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 1;                           /* Capa inferior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Capa inferior */
 }
 
 /* Capa oscura translúcida */
 .hero__background-carousel::after {
     content: '';
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(90deg, rgba(4, 44, 83, 0.85) 0%, rgba(4, 44, 83, 0.4) 100%);
-    z-index: 2;                           /* Capa sobre las fotos */
+    z-index: 2;
+    /* Capa sobre las fotos */
 }
 
 .hero__imgs--carousel {
     display: flex;
-    width: calc(var(--carousel-images) * 100%); /* 400% de ancho total */
+    width: calc(var(--carousel-images) * 100%);
+    /* 400% de ancho total */
     height: 100%;
     animation: cambio-imagen var(--carousel-duration) infinite ease-in-out;
 }
 
 .hero__imgs--carousel img {
-    width: calc(100% / var(--carousel-images)); /* 100% por pantalla individual */
+    width: calc(100% / var(--carousel-images));
+    /* 100% por pantalla individual */
     height: 100%;
     object-fit: cover;
     object-position: center;
@@ -509,15 +586,18 @@ html {
 
 .hero__content {
     position: relative;
-    z-index: 3;                           /* Flota al frente de todo */
+    z-index: 3;
+    /* Flota al frente de todo */
     max-width: 600px;
     color: var(--c-blanco);
-    margin-top: 80px;                     /* Compensación exacta de la altura del Header */
+    margin-top: 80px;
+    /* Compensación exacta de la altura del Header */
 }
 
 .hero__title {
     font-family: var(--font-titulos);
-    font-size: var(--font-size-hero);     /* 2.5rem */
+    font-size: var(--font-size-hero);
+    /* 2.5rem */
     line-height: var(--line-height-titulos);
     color: var(--c-blanco);
     margin-bottom: var(--space-1);
@@ -526,7 +606,8 @@ html {
 
 .hero__description {
     font-family: var(--font-cuerpo);
-    font-size: var(--font-size-base1);    /* 1.1rem */
+    font-size: var(--font-size-base1);
+    /* 1.1rem */
     line-height: var(--line-height-cuerpo);
     color: var(--c-fondo-suave);
     margin-bottom: var(--space-5);
@@ -539,7 +620,8 @@ html {
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-bold);
     color: var(--c-blanco);
-    background-color: var(--c-cta);       /* Color verde de conversión */
+    background-color: var(--c-cta);
+    /* Color verde de conversión */
     padding: 0.8rem 2rem;
     border-radius: 50px;
     text-decoration: none;
@@ -558,11 +640,36 @@ html {
 }
 
 @keyframes cambio-imagen {
-    0%, 20% { transform: translateX(0%); }      /* Foto 1 */
-    25%, 45% { transform: translateX(-25%); }   /* Foto 2 */
-    50%, 70% { transform: translateX(-50%); }   /* Foto 3 */
-    75%, 95% { transform: translateX(-75%); }   /* Foto 4 */
-    100% { transform: translateX(0%); }         /* Bucle */
+
+    0%,
+    20% {
+        transform: translateX(0%);
+    }
+
+    /* Foto 1 */
+    25%,
+    45% {
+        transform: translateX(-25%);
+    }
+
+    /* Foto 2 */
+    50%,
+    70% {
+        transform: translateX(-50%);
+    }
+
+    /* Foto 3 */
+    75%,
+    95% {
+        transform: translateX(-75%);
+    }
+
+    /* Foto 4 */
+    100% {
+        transform: translateX(0%);
+    }
+
+    /* Bucle */
 }
 
 /* Area de tarjetas viajes (grid)*/
@@ -602,7 +709,7 @@ html {
 .travel__grid {
     display: grid;
     /* Crea exactamente 4 columnas de igual tamaño en pantallas grandes */
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-1);
 }
 
@@ -610,9 +717,11 @@ html {
     background-color: var(--c-blanco);
     border: 1px solid var(--c-borde);
     border-radius: var(--space-3);
-    overflow: hidden; /* Corta la imagen para respetar las esquinas redondeadas */
+    overflow: hidden;
+    /* Corta la imagen para respetar las esquinas redondeadas */
     display: flex;
-    flex-direction: column; /* Apila el contenido de la tarjeta verticalmente */
+    flex-direction: column;
+    /* Apila el contenido de la tarjeta verticalmente */
     transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
@@ -623,15 +732,18 @@ html {
 }
 
 .travel__card-img {
-    position: relative; /* Base para posicionar el badge de forma absoluta adentro */
+    position: relative;
+    /* Base para posicionar el badge de forma absoluta adentro */
     width: 100%;
-    height: 200px; /* Altura fija para mantener simetría visual en las 4 columnas */
+    height: 200px;
+    /* Altura fija para mantener simetría visual en las 4 columnas */
 }
 
 .travel__imagen {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Evita que la foto se deforme al recortarse */
+    object-fit: cover;
+    /* Evita que la foto se deforme al recortarse */
     object-position: center;
 }
 
@@ -639,7 +751,8 @@ html {
 /* Cuerpo de la Tarjeta */
 .travel__card-content {
     padding: var(--space-1);
-    flex-grow: 1; /* TRUCO DEFENSE: Estira el texto para alinear todos los footers abajo */
+    flex-grow: 1;
+    /* TRUCO DEFENSE: Estira el texto para alinear todos los footers abajo */
 }
 
 .travel__card-title {
@@ -662,7 +775,8 @@ html {
     border-top: 1px solid var(--c-borde);
     background-color: var(--c-fondo-suave);
     display: flex;
-    justify-content: space-between; /* Separa precio a la izquierda y botón a la derecha */
+    justify-content: space-between;
+    /* Separa precio a la izquierda y botón a la derecha */
     align-items: center;
 }
 
@@ -720,17 +834,229 @@ html {
 
 @media (max-width: 1024px) {
     .travel__grid {
-        grid-template-columns: repeat(2, 1fr); /* columnas en tablets */
+        grid-template-columns: repeat(2, 1fr);
+        /* columnas en tablets */
     }
 }
 
 @media (max-width: 600px) {
     .travel__grid {
-        grid-template-columns: 1fr; /* columna en celulares */
+        grid-template-columns: 1fr;
+        /* columna en celulares */
     }
 }
 
+/* Inicio de ofertas */
+
+/* Estilos para Ofertas*/
+/* Contenedor principal */
+.promo-misterio {
+    padding: var(--space-5) var(--container-padding);
+    background-color: var(--c-fondo);
+    position: relative;
+}
+
+.promo-misterio__container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* --- Lado Izquierdo: Información --- */
+.promo-misterio__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.promo-misterio__info .about__badge {
+    margin-bottom: var(--space-3);
+}
+
+.promo-misterio__info .travel__title {
+    text-align: left;
+    margin-bottom: var(--space-3);
+}
+
+.promo-misterio__text {
+    font-family: var(--font-cuerpo);
+    font-size: var(--font-size-base1);
+    color: var(--c-texto-suave);
+    line-height: var(--line-height-cuerpo);
+    margin-bottom: var(--space-4);
+}
+
+.promo-misterio__lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.promo-misterio__lista li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-cuerpo);
+    font-size: var(--font-size-base);
+    color: var(--c-negro-texto);
+}
+
+.promo-misterio__icon {
+    color: var(--c-acento);
+    font-size: 1.2rem;
+    background-color: var(--c-fondo-suave);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+
+.promo-misterio__interaccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promo-misterio__tarjeta {
+    background-color: var(--c-blanco);
+    border: 1px solid var(--c-borde);
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(4, 44, 83, 0.08);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.promo-misterio__tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(4, 44, 83, 0.12);
+}
+
+/* Efecto de luz sutil en el fondo de la tarjeta */
+.promo-misterio__tarjeta-decoracion {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(24, 95, 165, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.promo-misterio__tarjeta-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--c-primario);
+    color: var(--c-blanco-texto);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-family: var(--font-titulos);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-4);
+}
+
+.promo-misterio__pregunta {
+    font-family: var(--font-titulos);
+    font-size: var(--font-size-h2);
+    color: var(--c-negro-texto);
+    margin-bottom: var(--space-4);
+    line-height: var(--line-height-titulos);
+}
+
+.promo-misterio__porcentajes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-titulos);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: var(--space-5);
+}
+
+.promo-misterio__porcentajes .muted {
+    color: var(--c-borde);
+    font-size: 1.5rem;
+}
+
+.promo-misterio__porcentajes .separator {
+    color: var(--c-fondo-suave);
+    font-weight: 300;
+}
+
+.promo-misterio__porcentajes .highlight {
+    color: var(--c-cta);
+    position: relative;
+    animation: palpitar 2s infinite ease-in-out;
+}
+
+/* Adaptación del botón para que ocupe todo el ancho en la tarjeta */
+.promo-misterio__btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: var(--font-size-base1);
+}
+
+/* Animación sutil para los signos de interrogación */
+@keyframes palpitar {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .promo-misterio__container {
+        grid-template-columns: 1fr;
+        /* Pasa a 1 sola columna en tablets/móviles */
+        gap: 3rem;
+    }
+
+    .promo-misterio__info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .promo-misterio__info .travel__title {
+        text-align: center;
+    }
+
+    .promo-misterio__lista li {
+        justify-content: flex-start;
+    }
+}
+
+/* Final de ofertas */
+
 /*Javier final ====================================*/
+
+
+
+
+
 
 /*Elsy===========================================*/
 
@@ -741,7 +1067,8 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Efecto Parallax elegante al hacer scroll */
+    background-attachment: fixed;
+    /* Efecto Parallax elegante al hacer scroll */
     padding: var(--space-5) var(--container-padding);
     color: var(--c-blanco-texto);
 }
@@ -750,7 +1077,8 @@ html {
     max-width: var(--container-max);
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap; /* Permite que en móviles se apile uno abajo del otro */
+    flex-wrap: wrap;
+    /* Permite que en móviles se apile uno abajo del otro */
     gap: var(--space-5);
     align-items: center;
 }
@@ -763,7 +1091,8 @@ html {
 /* Corregido: Ahora coincide exactamente con el class="contact__subtitle" de tu HTML */
 .contact__subtitle {
     font-family: var(--font-titulos);
-    font-size: var(--font-size-h2); /* Lo bajé un poco de h1 a h2 para que no compita con el título principal de la página */
+    font-size: var(--font-size-h2);
+    /* Lo bajé un poco de h1 a h2 para que no compita con el título principal de la página */
     color: var(--c-blanco-texto);
     margin-bottom: var(--space-4);
     line-height: var(--line-height-titulos);
@@ -814,11 +1143,13 @@ html {
 /* Columna del Formulario de la derecha (Corregido a .contact__form) */
 .contact__form {
     flex: 1 1 400px;
-    background-color: rgba(255, 255, 255, 0.08); /* Fondo ultra-sutil translúcido */
+    background-color: rgba(255, 255, 255, 0.08);
+    /* Fondo ultra-sutil translúcido */
     padding: var(--space-5);
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px); /* Efecto de cristal esmerilado (Glassmorphism) */
+    backdrop-filter: blur(8px);
+    /* Efecto de cristal esmerilado (Glassmorphism) */
 }
 
 .form__group {
@@ -907,11 +1238,10 @@ html {
     transform: translateX(4px);
 }
 
-/*==================================================
-  ELSY / NOEMI: FOOTER
-====================================================*/ 
+/*ELSY / NOEMI: FOOTER*/
 .footer {
-    background-color: #031e3a; /* Un tono sutilmente más oscuro que el primario para dar profundidad */
+    background-color: #031e3a;
+    /* Un tono sutilmente más oscuro que el primario para dar profundidad */
     color: var(--c-blanco);
     padding: 4rem 1.5rem 2rem 1.5rem;
     position: relative;
@@ -996,7 +1326,8 @@ html {
 
 .footer__links a:hover {
     color: var(--c-blanco-texto);
-    padding-left: 6px; /* Desplazamiento suave */
+    padding-left: 6px;
+    /* Desplazamiento suave */
 }
 
 /* Iconos de Redes Sociales */
@@ -1016,7 +1347,7 @@ html {
     background-color: rgba(255, 255, 255, 0.08);
     color: var(--c-blanco-texto);
     text-decoration: none;
-    font-size: 1.1rem; 
+    font-size: 1.1rem;
     transition: background-color var(--transition-base), transform var(--transition-fast);
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -1055,8 +1386,10 @@ html {
 /* Responsive Design para pantallas medianas y grandes */
 @media (min-width: 768px) {
     .footer__container {
-        grid-template-columns: 2fr 1fr 1fr; /* La marca toma más espacio, las otras columnas se alinean al lado */
+        grid-template-columns: 2fr 1fr 1fr;
+        /* La marca toma más espacio, las otras columnas se alinean al lado */
         gap: 1.5rem;
     }
 }
-/*================ FINAL ================*/
+
+/* FINAL */
